@@ -17,15 +17,14 @@ const Container = styled.View`
 
 
 export default withTheme(() => {
-    const discovery = useSelector(state => state.discovery)
-    const dispatch = useDispatch()
-    const { steps = [] } = discovery
+    const discovery = useSelector(state => state.discovery);
+    const dispatch = useDispatch();
+    const { steps = [] } = discovery;
 
     const back = () => {
-    
-        dispatch(closeDiscovery())
+        dispatch(closeDiscovery());
     }
-    // return <Container><Welcome /></Container>
+
     return (
         <Container>
              <FilterCustom 
@@ -33,9 +32,6 @@ export default withTheme(() => {
                 steps={steps} 
                 onBack={back}
                 onNext={() => dispatch(handleFinishDiscovery())}
-                
             />
-               
         </Container>)
-
 })

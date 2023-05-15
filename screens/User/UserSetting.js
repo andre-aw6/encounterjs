@@ -29,17 +29,12 @@ const Logout = styled.TouchableOpacity`
 
 
 export default withTheme( (props) => {
-
     const navigation = useNavigation();
     const dispatch = useDispatch();
-    const { policy = "", terms = "" } = useSelector(state => state.app.terms)
-    
-    const { isLogged = false } = useSelector(state => state.user)
-
-    
+    const { policy = "", terms = "" } = useSelector(state => state.app.terms);
+    const { isLogged = false } = useSelector(state => state.user);    
     const open_settings = () => {
-        // TODO: it might work on SDK 37?
-        // Linking.openSettings();
+        Linking.openSettings();
         if (Platform.OS === 'ios') {
             ExpoLink.openURL(`app-settings:`);
         } else {

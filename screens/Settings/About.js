@@ -29,16 +29,14 @@ const Line = styled.View`
 `;
 
 export default withTheme((props) => {
-
-    const { about = {} } = useSelector(state => state.app)
+    const { about = {} } = useSelector(state => state.app);
     const openInstagram = () => {
         Linking.openURL('instagram://user?username=' + about.instagram)
                 .catch(error => {
-                    Linking.openURL('http://instagram.com.br/' + about.instagram )
+                    Linking.openURL('http://instagram.com.br/' + about.instagram)
                         .catch()
-                })
+                });
     }
-    // alert(getBottomSpace())
     return <ScreePopup
         title={"Sobre" + (about.nameAbout || "")}
         footer={() => <ButtonContent>

@@ -12,8 +12,8 @@ const Container = styled.View`
 `;
 
 export default () => {
-    const [minHeight, setHeight] = useState(undefined)
-    const { login = {} } = useSelector(state => state.user)
+    const [minHeight, setHeight] = useState(undefined);
+    const { login = {} } = useSelector(state => state.user);
 
     if ((login.isLogin || login.isRegister || login.changePassword) && !login.isCodeSent)
         return <PasswordScreen minHeight={minHeight} />

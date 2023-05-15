@@ -10,7 +10,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { API_URI } from '../../../graphql/client';
 import Constants from 'expo-constants';
 
-
 const Container = styled.View`
     flex: 1;
     width: 100%;
@@ -50,12 +49,11 @@ const Line = styled.View`
 `;
 
 export default (props) => {
-
-    const dispatch = useDispatch()
-    const onboarding = useSelector(state => state.onboarding)
-    const type = 'firstQuestion'
-    const selects =  onboarding.questions && onboarding.questions[type] ? onboarding.questions[type] : undefined
-    const options = ["Opa, claro!","Ainda não"]
+    const dispatch = useDispatch();
+    const onboarding = useSelector(state => state.onboarding);
+    const type = 'firstQuestion';
+    const selects =  onboarding.questions && onboarding.questions[type] ? onboarding.questions[type] : undefined;
+    const options = ["Opa, claro!","Ainda não"];
     return (
         <Container>
             <Content>

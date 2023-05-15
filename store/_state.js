@@ -3,6 +3,5 @@ const stateDemo = {
         currentProduct: {},
         products: {}
     },
-
     shelves: {}
 }

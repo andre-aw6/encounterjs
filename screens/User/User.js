@@ -24,15 +24,12 @@ const Logout = styled.TouchableOpacity`
 `;
 
 export default withTheme((props) => {
-
     const navigation = useNavigation();
     const dispatch = useDispatch();
-    const { isLogged = false, pendences = [] } = useSelector(state => state.user)
-
-    const hasPendences = pendences.length > 0
+    const { isLogged = false, pendences = [] } = useSelector(state => state.user);
+    const hasPendences = pendences.length > 0;
     const menuItems = [
         { title: "Dados Pessoais", description: "Edite suas informações pessoais de cadastro", onPress: () => navigation.navigate('EditProfile') },
-
     ]
 
     if(config.myPreferences)

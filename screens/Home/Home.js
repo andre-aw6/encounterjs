@@ -187,5 +187,3 @@ export default function Home(props) {
     </Screen>
   );
 }
-
-// export default connect()(Home)

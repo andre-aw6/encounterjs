@@ -46,16 +46,16 @@ const Hr = styled.View`
 `;
 
 function Notifications({ notifications, isLoading }) {
-    const dispatch = useDispatch()
-    const navigation = useNavigation()
+    const dispatch = useDispatch();
+    const navigation = useNavigation();
 
     function onPress(n) {
         dispatch(handleOpenNotification(n.key, n.action))
         .then(result => {
           if(result && result.redirect){
-                navigation.navigate(result.redirect)
+                navigation.navigate(result.redirect);
           }
-        })
+        });
     }
 
     if (isLoading) {

@@ -44,16 +44,16 @@ const TextContent = styled.Text`
 `;
 
 const ImageContent = styled.View`
-flex: 1;
-min-height: 88px;
-width: 100%;
-align-items: center;
-justify-content: center;
+    flex: 1;
+    min-height: 88px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 `;
 
 const PaddingTop = styled.View`
-height:  ${props => Platform.OS == "ios" ? Constants.statusBarHeight + 'px' :props.theme.space.space2 };
-width: 100%;
+    height:  ${props => Platform.OS == "ios" ? Constants.statusBarHeight + 'px' :props.theme.space.space2 };
+    width: 100%;
 `;
 
 const Content = styled.View`
@@ -69,7 +69,6 @@ const ButtonsRow = styled.View`
 `;
 
 export default ({ onNext, title, texts, footerText, cancelBtn, showListStyle, okBtn, img }) => {
-   
     const dispatch = useDispatch();
 
     return (<MainContainer>
@@ -96,13 +95,10 @@ export default ({ onNext, title, texts, footerText, cancelBtn, showListStyle, ok
                 </TextLine>
             ))
             }
-           
-            
             <Space n={4} />
             <ImageContent>
             <Image resizeMode={"contain"} style={{ height: '100%', width: '75%' }} source={{ uri: (API_URI + "/" + img) }} />
             </ImageContent>
-
         </Content>
         <Footer>
             <Space n={4} />
@@ -111,12 +107,10 @@ export default ({ onNext, title, texts, footerText, cancelBtn, showListStyle, ok
                     <H1>{footerText}</H1>
                     <Space n={3} />
                 </React.Fragment>
-            }
-            
+            } 
             <ButtonsRow>
                 <Button width={cancelBtn ? "auto" : "100%"} type="CallToAction-Light" onPress={() => onNext()}>{okBtn}</Button>
             </ButtonsRow>
-
             {
                 cancelBtn && <React.Fragment>
                     <Space n={2} />
@@ -124,9 +118,7 @@ export default ({ onNext, title, texts, footerText, cancelBtn, showListStyle, ok
                         <Button onPress={() => dispatch(handleLoginOnboard())} type="CallToAction-Outline">{cancelBtn}</Button>
                     </ButtonsRow>
                 </React.Fragment>
-            }
-
-            
+            }            
         </Footer>
         <Bottom />
     </MainContainer>)

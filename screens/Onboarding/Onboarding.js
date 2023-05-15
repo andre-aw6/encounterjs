@@ -26,7 +26,6 @@ const Container = styled.View`
 export default withTheme((props) => {
   const dispatch = useDispatch();
   const onboarding = useSelector((state) => state.onboarding);
-
   const { steps = [] } = onboarding;
   const [step, setStep] = useState(0);
 
@@ -41,7 +40,6 @@ export default withTheme((props) => {
         />
       </Container>
     );
-  // return <Container><Welcome /></Container>
 
   if (config.translation == "zeero")
     return (

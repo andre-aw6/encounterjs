@@ -20,17 +20,17 @@ const {
 
 
 const Container = styled.View`
-padding-top: ${props => props.theme.space.space2};
-padding-bottom: 0px;
-width: 100%;
-align-items: center;
+    padding-top: ${props => props.theme.space.space2};
+    padding-bottom: 0px;
+    width: 100%;
+    align-items: center;
 `;
 
 const Content = styled.View`
-padding: ${props => props.theme.space.space3};
-padding-bottom: 0px;
-width: 100%;
-align-items: center;
+    padding: ${props => props.theme.space.space3};
+    padding-bottom: 0px;
+    width: 100%;
+    align-items: center;
 `;
 
 const Line = styled.View`
@@ -68,17 +68,13 @@ const SafeSpace = styled.View`
 `;
 
 export default withTheme((props) => {
-    // state = {
-    //     email : '',
-    //     isLoading: false
-    // }
-    const { login = {} } = useSelector(state => state.user)
-    const isLoading = login.loading
-    const errorMessage = login.errorMessage
+    const { login = {} } = useSelector(state => state.user);
+    const isLoading = login.loading;
+    const errorMessage = login.errorMessage;
     const { email } = login;
     const dispatch = useDispatch();
 
-    const [code, setCode] = useState('')
+    const [code, setCode] = useState('');
 
     const codeSize = [1, 2, 3, 4, 5];
 
@@ -86,26 +82,20 @@ export default withTheme((props) => {
         if(isLoading) return;
 
         if(code.length == codeSize.length - 1){
-            dispatch(handleSendConfirmCode(code + '' + n))
-            
-            // setError(true)
-            // setTimeout(() => )
+            dispatch(handleSendConfirmCode(code + '' + n));
         }
 
         if(code.length >= codeSize.length)
-            setCode(''+ n)
+            setCode(''+ n);
         else
-            setCode(code + '' + n)
+            setCode(code + '' + n);
 
-        dispatch(handleHideErrorCode())
-
-        
+        dispatch(handleHideErrorCode());        
     }
 
     const cleanCode = () => {
-
-        dispatch(handleHideErrorCode())
-        setCode(code.slice(0, code.length-1))
+        dispatch(handleHideErrorCode());
+        setCode(code.slice(0, code.length-1));
     }
 
     const getNumber = (n) => {

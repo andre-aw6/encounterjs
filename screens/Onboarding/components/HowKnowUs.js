@@ -23,18 +23,18 @@ const Container = styled.View`
 `;
 
 const Content = styled.ScrollView`
-flex-grow: 1;
+  flex-grow: 1;
 `;
 
 const PaddingTop = styled.View`
-height:  ${props => Platform.OS == "ios" ? Constants.statusBarHeight + 'px' :props.theme.space.space2 };
-width: 100%;
+  height:  ${props => Platform.OS == "ios" ? Constants.statusBarHeight + 'px' :props.theme.space.space2 };
+  width: 100%;
 `;
 
 const ImageContent = styled.View`
-flex: 1;
-align-items: center;
-justify-content: center;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Itens = styled.ScrollView`
@@ -76,12 +76,12 @@ const Line = styled.View`
 
 export default withTheme((props) => {
   
-  const [select, setSelect] = useState()
+  const [select, setSelect] = useState();
   const dispatch = useDispatch();
 
   const next = () => {
-    dispatch(handleRespondQuestion(select))
-    props.onNext()
+    dispatch(handleRespondQuestion(select));
+    props.onNext();
   }
   const options = [
       {
@@ -126,10 +126,8 @@ export default withTheme((props) => {
               )}
             </Itens>    
             <ButtonSpace />  
-          
             <Bottom />
           </Content>
-          
           <Footer>
               <Space n={2} />
               <ButtonWrap>
@@ -137,7 +135,6 @@ export default withTheme((props) => {
               </ButtonWrap>
           <Bottom />
           </Footer>
-          
       </Container>)
 }
 

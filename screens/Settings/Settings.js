@@ -39,7 +39,7 @@ const MenuItemHeader = styled.View`
 `;
 
 const MenuItemText = styled.View`
-flex: 1;
+    flex: 1;
 `;
 
 const MenuItemImage = styled.View`
@@ -53,19 +53,18 @@ const Line = styled.View`
 `;
 
 const UserImage= styled.View`
-width: 64px;
-height: 64px;
-margin-right: ${props => props.theme.space.space2};
-margin-bottom: ${props => props.theme.space.space1};
+    width: 64px;
+    height: 64px;
+    margin-right: ${props => props.theme.space.space2};
+    margin-bottom: ${props => props.theme.space.space1};
 `;
 
 export default withTheme((props) => {
-
     const navigation = useNavigation();
-    const { isLogged = false, userInfo = {}, pendences = [], user = {}} = useSelector(state => state.user)
-    const { about = {} } = useSelector(state => state.app)
+    const { isLogged = false, userInfo = {}, pendences = [], user = {}} = useSelector(state => state.user);
+    const { about = {} } = useSelector(state => state.app);
     const dispatch = useDispatch();
-    const hasPendences = pendences.length > 0
+    const hasPendences = pendences.length > 0;
     
     const isLoggedContent = () => (<MenuOption onPress={ () => navigation.navigate('User')}>
             <UserImage>

@@ -14,9 +14,9 @@ import { EvilIcons } from '@expo/vector-icons';
 import config from '../../../config';
 
 const Container = styled.KeyboardAvoidingView`
-padding: ${props => props.theme.space.space3};
-padding-top: ${props => props.theme.space.space4};
-width: 100%;
+    padding: ${props => props.theme.space.space3};
+    padding-top: ${props => props.theme.space.space4};
+    width: 100%;
 `;
 
 const FlexContent = styled.View`
@@ -29,16 +29,11 @@ const SafeSpace = styled.View`
 `;
 
 export default (props) => {
-    // state = {
-    //     email : '',
-    //     isLoading: false
-    // }
-    const { login = {} } = useSelector(state => state.user)
-
-    const [email, setEmail] = useState(login.email || '')
-    const [isValidEmail, setIsValidEmail] = useState(login.email || '')
-    const isLoading = login.loading
-    const errorMessage = login.errorMessage
+    const { login = {} } = useSelector(state => state.user);
+    const [email, setEmail] = useState(login.email || '');
+    const [isValidEmail, setIsValidEmail] = useState(login.email || '');
+    const isLoading = login.loading;
+    const errorMessage = login.errorMessage;
     const dispatch = useDispatch();
 
     const validateEmail = (email) => {
@@ -48,12 +43,12 @@ export default (props) => {
 
 
     const onEmailChange = (email) => {
-        setIsValidEmail(validateEmail(email.toLowerCase()))
-        setEmail(email.toLowerCase())
+        setIsValidEmail(validateEmail(email.toLowerCase()));
+        setEmail(email.toLowerCase());
     }
 
     const sendEmail = () => {
-        dispatch(handleEmailAlreadyExists(email))
+        dispatch(handleEmailAlreadyExists(email));
     }
 
     const showApple = Platform.OS == 'ios';

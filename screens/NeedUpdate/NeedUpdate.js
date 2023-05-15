@@ -41,12 +41,12 @@ const TextItemListIcon = styled.View`
   width: 12px;
   height: 12px;
   border-radius: 12px;
-  backgroundcolor: ${(props) => props.theme.colors.primaryDarkColor};
+  background-color: ${(props) => props.theme.colors.primaryDarkColor};
 `;
 
 const TextContent = styled.Text`
   flex: 1;
-  flex-flow-: row;
+  flex-flow: row;
 `;
 
 const ImageContent = styled.View`
@@ -76,14 +76,24 @@ const ButtonsRow = styled.View`
   justify-content: flex-end;
 `;
 
-export default () => {
-  const { update = undefined } = useSelector((state) => state.app);
+export default function UpdateScreen() {
+  const { update } = useSelector((state) => state.app);
   if (!update) return null;
+
+  console.log("Update info:", update);
 
   const { title, texts, btnCancel, btnText, img, link } = update;
   const dispatch = useDispatch();
   const onNext = () => {
-    Linking.openURL(link);
+    Linking.canOpenURL(link)
+      .then((supported) => {
+        if (supported) {
+          Linking.openURL(link);
+        } else {
+          console.log("Cannot open URL");
+        }
+      })
+      .catch((error) => console.log("Error opening URL:", error));
   };
   const onCancel = () => {
     dispatch(handleCancelUpdate());
@@ -129,7 +139,7 @@ export default () => {
         </ButtonsRow>
 
         {btnCancel && (
-          <React.Fragment>
+          <>
             <Space n={2} />
             <ButtonsRow>
               <Button
@@ -140,10 +150,10 @@ export default () => {
                 {btnCancel}
               </Button>
             </ButtonsRow>
-          </React.Fragment>
+          </>
         )}
       </Footer>
       <Bottom />
     </MainContainer>
   );
-};
+}
