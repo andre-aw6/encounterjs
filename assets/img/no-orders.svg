@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="106" height="106" viewBox="0 0 106 106">
+    <defs>
+        <filter id="prefix__Elipse_2" width="106" height="106" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .prefix__cls-2{fill:#414042}.prefix__cls-3{fill:#2f2e41}.prefix__cls-5{fill:#22a19f}
+        </style>
+    </defs>
+    <g id="prefix__Grupo_1793" data-name="Grupo 1793" transform="translate(-135 -156)">
+        <g transform="translate(135 156)">
+            <g id="prefix__Elipse_2-2" data-name="Elipse 2" transform="translate(9 9)" style="fill:#ebf5f5;stroke:#c1e0df;stroke-width:1.5px">
+                <circle cx="44" cy="44" r="44" style="stroke:none"/>
+                <circle cx="44" cy="44" r="43.25" style="fill:none"/>
+            </g>
+        </g>
+        <g id="prefix__Grupo_1372" data-name="Grupo 1372" transform="translate(49.732 -1227.337)">
+            <circle id="prefix__Elipse_13" cx="16.939" cy="16.939" r="16.939" class="prefix__cls-2" data-name="Elipse 13" transform="translate(119.032 1419.503)"/>
+            <path id="prefix__Retângulo_60" d="M0 0H5.146V9.22H0z" class="prefix__cls-3" data-name="Retângulo 60" transform="rotate(-17.06 4894.617 281.854)"/>
+            <path id="prefix__Retângulo_61" d="M0 0H5.146V9.22H0z" class="prefix__cls-3" data-name="Retângulo 61" transform="rotate(-17.06 4889.458 247.62)"/>
+            <ellipse id="prefix__Elipse_14" cx="4.288" cy="1.608" class="prefix__cls-3" data-name="Elipse 14" rx="4.288" ry="1.608" transform="rotate(-17.06 4920.291 277.986)"/>
+            <ellipse id="prefix__Elipse_15" cx="4.288" cy="1.608" class="prefix__cls-3" data-name="Elipse 15" rx="4.288" ry="1.608" transform="rotate(-17.06 4914.42 243.859)"/>
+            <circle id="prefix__Elipse_16" cx="5.789" cy="5.789" r="5.789" data-name="Elipse 16" transform="translate(129.332 1426.428)" style="fill:#fff"/>
+            <circle id="prefix__Elipse_17" cx="1.93" cy="1.93" r="1.93" class="prefix__cls-2" data-name="Elipse 17" transform="translate(133.192 1430.288)"/>
+            <path id="prefix__Caminho_35" d="M652.341 513.254c-3.107-5.453-.746-12.654 5.273-16.084s13.418-1.788 16.525 3.665-.513 8.929-6.532 12.359-12.159 5.513-15.266.06z" class="prefix__cls-5" data-name="Caminho 35" transform="translate(-536.704 912.958)"/>
+            <path id="prefix__Caminho_38" d="M760.4 584.076c0 11.81-7.02 15.933-15.681 15.933q-.3 0-.6-.007c-.4-.009-.8-.028-1.191-.055-7.816-.553-13.888-4.889-13.888-15.872 0-11.366 14.525-25.708 15.616-26.77l.063-.061s15.681 15.023 15.681 26.832z" class="prefix__cls-5" data-name="Caminho 38" transform="translate(-598.029 864.358)"/>
+            <path id="prefix__Caminho_39" d="M776.411 598.2l5.735-8.014-5.75 8.894-.015.92c-.4-.009-.8-.028-1.191-.055l.618-11.815v-.092l.011-.017.058-1.116-5.764-8.916 5.782 8.079.013.237.467-8.927-4.935-9.213 4.995 7.646.486-18.508v-.063.061l-.081 14.594 4.913-5.786-4.933 7.043-.13 7.993 4.587-7.671-4.606 8.847-.073 4.443 6.659-10.676-6.684 12.227z" class="prefix__cls-2" data-name="Caminho 39" transform="translate(-630.295 864.358)"/>
+            <ellipse id="prefix__Elipse_18" cx="2.659" cy="8.47" class="prefix__cls-2" data-name="Elipse 18" rx="2.659" ry="8.47" transform="rotate(-64.626 1200.021 625.523)"/>
+        </g>
+    </g>
+</svg>

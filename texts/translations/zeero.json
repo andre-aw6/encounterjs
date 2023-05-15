@@ -1,0 +1,76 @@
+{
+    "discovery" : {
+        "title": "Encontre fácil o que procura",
+        "subtitle": "Vem que a gente te ajuda!"
+    },
+    "notFoundProducts" : {
+        "title": "Não encontrou o que procurava?",
+        "subtitle": "Manda pra gente!",
+        "buttonText": "Não encontrei!"
+    },
+
+    "notLoggedBox" : {
+        "buttonText": "Entrar ou cadastrar",
+        "description": "Faça o login ou cadastro para fazer parte\nda nova relação com o varejo!"
+  
+    },
+    "search": {
+        "favorites": "Você ainda não possui favoritos",
+        "noResult": "Nenhum produto encontrado",
+        "button": "Filtrar"
+    },
+    "orders": {
+        "orderDetails": "Detalhes da compra",
+        "order": "Compra",
+        "products": "Produtos",
+        "orderAction": "Efetuar compra",
+
+        "notLogged": {
+            "title": "Nenhuma compra encontrada..."
+        },
+        "currentOrders": "Você não possui encomendas em andamento.",
+        "oldOrders": "Você ainda não possui compras anteriores.",
+        "buttonText": "Buscar produtos",
+        "evaluate": "Avaliar produto",
+
+        "helpWPP": "Olá, estou com dúvida em relação à compra *{{key}}*",
+
+        "help": {
+            "title": "Algum problema com a sua compra?",
+            "subtitle": "Vamos te ajudar!",
+            "buttonText": "Me ajuda"
+        },
+
+        "firstOrder": {
+            "title": "Tudo certo! Estamos quase lá. Em breve você realizará a sua 1ª compra!",
+            "description": "Em breve você receberá a confirmação do seu pedido."
+        }
+    },
+
+    "cupon": {
+        "btn": "Ver Produtos"
+    },
+
+    "settings": {
+        "notLogged": "Falta pouco para você ter o seu perfil!"
+    },
+    "cart": {
+        "notLogged": "Faça o login ou cadastro para fazer parte\nda nova relação com o varejo!",
+        "openCart": "Ver sacola",
+        "cartName": "Sacola",
+        "cartRemove": "Tem certeza que deseja remover da sacola o produto selecionado?",
+        "minimezedText": " por {{countItems}}",
+        "rentTimeBox": {
+            "title": "Sua encomenda",
+            "description": "Você pode comprar de uma ou mais lojas ao mesmo tempo.",
+            "button": "Continuar vendo produtos"
+        }
+    },
+
+    "tutorial": "este botãozinho te ajudará bastante na hora de encontrar o que procura!",
+    "help": "Conversar com{{name}}",
+
+    "menu": {
+        "orders" : "Compras"
+    }
+}

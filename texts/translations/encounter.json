@@ -1,0 +1,78 @@
+{
+    
+    "discovery" : {
+        "title": "Encontre o jogo ideal",
+        "subtitle": "Quer encontrar um jogo, mas ainda não sabe qual? Vem que a gente te ajuda a descobrir!"
+    },
+
+    "notLoggedBox" : {
+        "buttonText": "Buscar jogos",
+        "description": "Faça o login ou cadastro para começar a alugar os melhores jogos de tabuleiro!"
+  
+    },
+    "search": {
+        "favorites": "Você ainda não jogos favoritos",
+        "noResult": "Nenhum jogo encontrado",
+        "button": "Ver jogos"
+    },
+    
+    "cupon": {
+        "btn": "Ver Jogos"
+    },
+
+    "orders": {
+        "orderDetails": "Detalhes do aluguel",
+        "order": "Aluguel",
+        "products": "Aluguel",
+        "orderAction": "Alugar",
+
+        "notLogged": {
+            "title": "Nenhum aluguel encontrado..."
+        },
+        "currentOrders": "Você não possui aluguéis em andamento.",
+        "oldOrders": "Você ainda não possui aluguéis anteriores.",
+        "buttonText": "Buscar Jogos",
+        "evaluate": "Avaliar jogos",
+
+        "helpWPP": "Olá, estou com dúvida em relação ao aluguel *{{key}}*",
+
+        "help": {
+            "title": "Teve algum problema com seu aluguel?",
+            "subtitle": "Vamos te ajudar!",
+            "buttonText": "Ajuda"
+        },
+
+        "firstOrder": {
+            "title": "Tudo certo! Estamos quase lá. Em breve você realizará o seu 1º aluguel!",
+            "description": "Em até poucas horas você receberá o retorno da análise do seu cadastro."
+        }
+    },
+
+    "settings": {
+        "notLogged": "Falta pouco para você começar a alugar!",
+        "button": "Ver jogos"
+    },
+    "cart": {
+        "notLogged": "Faça o login ou cadastro para começar\na alugar os melhores jogos de tabuleiro!",
+       
+        "cartName": "Carrinho",
+        "cartRemove": "Tem certeza que deseja remover do carrinho o jogo selecionado?",
+        "openCart": "Ver carrinho",
+
+        "minimezedText": " por {{time}} dias",
+        
+        "rentTimeBox": {
+            "title": "Tempo de aluguel",
+            "time": "{{time}} dias",
+            "description": "Alugando a partir de 2 jogos, seu prazo aumenta para 7 dias!",
+            "button": "Continuar escolhendo jogos"
+        }
+    },
+
+    "tutorial": "este botãozinho vai te ajudar muitooo na hora de encontrar novos jogos!",
+    "help": "Ajuda",
+
+    "menu": {
+        "orders" : "Aluguéis"
+    }
+}

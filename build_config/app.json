@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Encounter",
+    "slug": "Encounter",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon-encounter.png",
+    "splash": {
+      "image": "./assets/splash-encounter.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0e9577"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+
+    "facebookScheme": "fb252890679384327",
+    "facebookAppId": "252890679384327",
+    "facebookDisplayName": "Encounter",
+    
+    "ios": {
+      "bundleIdentifier": "br.com.encounter",
+      "buildNumber": "1.0.4",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAOwDY2YDjgwwy2m8p2fqjpaPEnhu-d1Uc",
+        "googleSignIn": {
+          "reservedClientId" : "com.googleusercontent.apps.907241676885-mm3oh94rcke1a5nfm8ra4jtls0comm6a"
+        }
+      }
+    },
+    "android": {
+      "bundleIdentifier": "br.com.encounter",
+      "versionCode": 9,
+
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyA8Gjfv8GrqHAwhAIFLq7N1RdYDR2ArkeM"
+        },
+        "googleSignIn" : {
+          "apiKey": "AIzaSyA8Gjfv8GrqHAwhAIFLq7N1RdYDR2ArkeM",
+          "certificateHash": "4BFF995238A7C1B43ED6F2A69844667925784C1D"
+        }
+      }
+    },
+
+    "sdkVersion": "48.0.0",
+    "description": ""
+  }
+}

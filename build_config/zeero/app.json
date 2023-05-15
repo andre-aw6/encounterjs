@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "Zeero",
+    "slug": "Zeero",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.5",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#496DFB"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+
+  
+
+    "facebookScheme": "fb252890679384327",
+    "facebookAppId": "252890679384327",
+    "facebookDisplayName": "Zeero",
+    
+    "ios": {
+
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Nós precisamos da sua localização para encontrar o endereço de entrega."
+      },
+
+      "bundleIdentifier": "tech.zeero.zeero",
+      "usesAppleSignIn": true,
+      "buildNumber": "1.0.10",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAOwDY2YDjgwwy2m8p2fqjpaPEnhu-d1Uc",
+        "googleSignIn": {
+          "reservedClientId" : "com.googleusercontent.apps.907241676885-mm3oh94rcke1a5nfm8ra4jtls0comm6a"
+        }
+      }
+    },
+    "android": {
+
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
+
+      "package": "tech.zeero.zeero",
+      "versionCode": 18,
+
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyA8Gjfv8GrqHAwhAIFLq7N1RdYDR2ArkeM"
+        },
+        "googleSignIn" : {
+          "apiKey": "AIzaSyA8Gjfv8GrqHAwhAIFLq7N1RdYDR2ArkeM",
+          "certificateHash": "4BFF995238A7C1B43ED6F2A69844667925784C1D"
+        }
+      }
+    },
+
+    "sdkVersion": "37.0.0",
+    "description": ""
+  }
+}
