@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import Screen from "../../components/Screen";
 
 import styled, { withTheme } from "styled-components/native";
@@ -7,11 +7,8 @@ import SearchBar from "./components/SearchBar";
 import {
   H3,
   Subtitle2,
-  Subtitle1,
-  Subtitle3,
 } from "../../components/Typography";
 import { useSelector, useDispatch } from "react-redux";
-import { ScrollView } from "react-native-gesture-handler";
 import { Tag } from "../../components/Tag";
 import {
   handleClearSelects,
@@ -77,7 +74,7 @@ const Search = (props) => {
 
   useEffect(() => {
     dispatch(handleNeedTutorial());
-  }, []);
+  }, [dispatch]);
 
   const filterResult = () => (
     <FlexContent>

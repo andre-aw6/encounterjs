@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { handleHideNotification, handleShowNotification } from "../../../store/actions/notification";
 import { Animated, TouchableWithoutFeedback, Vibration, Platform } from "react-native";
 import styled from "styled-components/native";
-import { getBottomSpace } from "react-native-iphone-x-helper";
 import Constants from "expo-constants";
 import * as Notifications from 'expo-notifications';
 import { handleOpenNotification } from "../../../store/actions/shared";
@@ -56,7 +55,7 @@ const AppNotification = () => {
       duration: 400,
       useNativeDriver: false,
     }).start();
-  }, [notification.show]);
+  }, );
 
   useEffect(() => {
     console.log("Registering notification listener");

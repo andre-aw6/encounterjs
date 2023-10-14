@@ -3,12 +3,9 @@ import styled from "styled-components/native";
 import EditProfileContent from "./EditProfileContent";
 import { H2 } from "../../components/Typography";
 import { Space } from "../../components/Space";
-import Constants from "expo-constants";
-import { getBottomSpace } from "react-native-iphone-x-helper";
 import * as Animatable from "react-native-animatable";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch } from "react-redux";
-import { openCart } from "../../store/actions/info";
 import { handleOpenCart } from "../../store/actions/cart";
 
 const Container = styled.View`
@@ -28,7 +25,7 @@ export default () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(handleOpenCart(false));
-  }, []);
+  }, [dispatch]);
 
   return (
     <Animatable.View

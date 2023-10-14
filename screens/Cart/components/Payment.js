@@ -29,7 +29,8 @@ export default withTheme((props) => {
 
   useEffect(() => {
     if (!paymentMethods) dispatch(handleLoadPaymentMethods());
-  }, [paymentMethods]);
+  },);
+
   const methods = paymentMethods || [];
   const cardNumber = methods.find((p) => p.key == payment)
     ? methods.find((p) => p.key == payment).card_number

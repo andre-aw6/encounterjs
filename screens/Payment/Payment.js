@@ -3,10 +3,10 @@ import ScreePopup from "../../components/ScreePopup";
 import styled, { withTheme } from 'styled-components/native';
 import { useSelector, useDispatch } from 'react-redux';
 import NotLoggedBox from '../User/components/NotLoggedBox';
-import { handleCloseCartChoseAddress, handleCloseSetCartChosePayment } from '../../store/actions/shared';
+import { handleCloseSetCartChosePayment } from '../../store/actions/shared';
 import MenuOption from '../../components/MenuOption';
 import { Button } from '../../components/Button';
-import { H3, H4 } from '../../components/Typography';
+import { H4 } from '../../components/Typography';
 import HideInfo from '../../components/HideInfo';
 import { handleLoadPaymentMethods, handleSetCurrentPayment } from '../../store/actions/payments';
 import { Space } from '../../components/Space';
@@ -38,7 +38,7 @@ export default withTheme(() => {
 
     useEffect(() => {
         dispatch(handleLoadPaymentMethods())
-    }, [])
+    }, [dispatch])
 
     const goTo = (key) => {
 

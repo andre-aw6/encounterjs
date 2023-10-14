@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components/native';
-import { View } from 'react-native';
 import { H3, Subtitle2 } from '../../components/Typography';
 import { Space } from '../../components/Space';
 import ScreePopup from '../../components/ScreePopup';
@@ -8,14 +7,12 @@ import { Box } from '../../components/Box';
 import NotLoggedBox from '../User/components/NotLoggedBox';
 import InformationBox from '../../components/InformationBox';
 import { useSelector, useDispatch } from 'react-redux';
-import { handleLoadNotifications } from '../../store/actions/user';
 import {
     Placeholder,
     PlaceholderMedia,
     PlaceholderLine,
     Fade
 } from "rn-placeholder";
-import { isLoading } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
 import { handleOpenNotification } from '../../store/actions/shared';
 
@@ -72,8 +69,8 @@ function Notifications({ notifications, isLoading }) {
                                 </Info>
                                 <Date>
                                     <PlaceholderMedia noMargin size={36} />
-                                    {/* <Subtitle2 type={"secondDarkColor"}>{n.dateTimeFormated}</Subtitle2>
-                                    <Subtitle2 type={"secondDarkColor"}>{n.dateFormated}</Subtitle2> */}
+                                    <Subtitle2 type={"secondDarkColor"}>{n.dateTimeFormated}</Subtitle2>
+                                    <Subtitle2 type={"secondDarkColor"}>{n.dateFormated}</Subtitle2>
                                 </Date>
                             </NotificationBody>
                             <Space n={1} />

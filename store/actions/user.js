@@ -11,11 +11,6 @@ import {
   login as loginApi,
   editBasicInfo,
   toggleFavorite,
-  getAddressByLatLong,
-  addAddress,
-  editAddress,
-  getAddressBySearch,
-  removeAddress,
   uploadDocument,
   forgotPassword,
   resetPassword,
@@ -28,18 +23,18 @@ import {
 import * as Device from "expo-device";
 import * as ImageManipulator from "expo-image-manipulator";
 import storage from "../../utils/storage";
-
 import * as Crypto from "expo-crypto";
 import { setProducts } from "./product";
 import * as Google from "expo-google-app-auth";
 import { handleShowNotification } from "./notification";
 import { arrayToObj } from "../../utils/helpers";
-import { handleLogoutCart, handleSelectAddress, handleLoginCart } from "./cart";
+import { handleLogoutCart, handleLoginCart } from "./cart";
 import { setAdresses } from "./address";
 import { API_URI } from "../../graphql/client";
 import config from "../../config";
 import * as AppleAuthentication from "expo-apple-authentication";
 import { Linking } from "react-native";
+
 export const SHOW_LOGIN_POPUP = "SHOW_LOGIN_POPUP";
 export const SET_LOGOUT_USER = "SET_LOGOUT_USER";
 export const SET_NEED_COMPLETE_INFOS = "SET_NEED_COMPLETE_INFOS";
@@ -96,6 +91,7 @@ function showLoginPopup(show) {
     show,
   };
 }
+
 function setAutocompleteRegister(name, lastname) {
   return {
     type: SET_AUTO_COMPLETE_REGISTER,
@@ -110,6 +106,7 @@ function setUserInfo(userInfo) {
     userInfo,
   };
 }
+
 function setFavorites(favorites) {
   return {
     type: SET_USER_FAVORITES,
@@ -123,6 +120,7 @@ function addUserFavorite(favorite) {
     favorite,
   };
 }
+
 function removeUserFavorite(favorite) {
   return {
     type: REMOVE_USER_FAVORITE,
@@ -136,6 +134,7 @@ function setLoginUser(user) {
     user,
   };
 }
+
 function setNeedCompleteInfos(needCompleteInfos) {
   return {
     type: SET_NEED_COMPLETE_INFOS,
@@ -165,6 +164,7 @@ function setLoginLoading(loading) {
     loading,
   };
 }
+
 function setEmailLoginProcess(email, isLogin) {
   return {
     type: SET_EMAIL_LOGIN_PROCESS,
@@ -195,21 +195,20 @@ function setUserNotification(notifications) {
   };
 }
 
-// export const SET_USER_REMEMBER_PRODUCTS = "SET_USER_REMEMBER_PRODUCTS"
-// export const ADD_USER_REMEMBER_PRODUCTS = "ADD_USER_REMEMBER_PRODUCTS"
-// export const REMOVE_USER_REMEMBER_PRODUCTS = "REMOVE_USER_REMEMBER_PRODUCTS"
 function setUserRememberProducts(rememberProductKeys) {
   return {
     type: SET_USER_REMEMBER_PRODUCTS,
     rememberProductKeys,
   };
 }
+
 function addUserRememberProducts(key) {
   return {
     type: ADD_USER_REMEMBER_PRODUCTS,
     key,
   };
 }
+
 function removeUserRememberProducts(key) {
   return {
     type: REMOVE_USER_REMEMBER_PRODUCTS,
@@ -241,7 +240,6 @@ export function loginApple() {
 
         state: csrf,
         nonce: hashedNonce,
-        // nonce
       });
 
       const { fullName } = result;
@@ -259,6 +257,7 @@ export function loginApple() {
     }
   };
 }
+
 export function loginGoogle() {
   return async (dispatch) => {
     try {
@@ -290,7 +289,7 @@ export function loginFB() {
     try {
       await Facebook.initializeAsync(config.facebookAppId);
       const { type, token } = await Facebook.logInWithReadPermissionsAsync({
-        permissions: ["public_profile", "email"], //'user_birthday', 'user_gender' ],
+        permissions: ["public_profile", "email"],
       });
       if (type === "success") {
         dispatch(handleSocialLogin("facebook", token));
@@ -330,10 +329,9 @@ export function handleSocialLogin(type, password) {
       dispatch(handleShowNotification("Ocorreu um erro", "danger"));
       dispatch(setLoginLoading(false));
     }
-
-    // action
   };
 }
+
 export function handleSendPassword(password) {
   return async (dispatch, getState) => {
     try {
@@ -391,8 +389,6 @@ export function handleSendPassword(password) {
       dispatch(handleShowNotification("Ocorreu um erro", "danger"));
       dispatch(setLoginLoading(false));
     }
-
-    // action
   };
 }
 
@@ -462,6 +458,7 @@ export function handleEditUserInfo(
       gender,
       document
     );
+
     const { user } = getState();
     const { pendences = [] } = user;
     dispatch(setNeedCompleteInfos(false));
@@ -469,8 +466,6 @@ export function handleEditUserInfo(
     if (!terms) dispatch(handleShowNotification("Dados alterados com sucesso"));
 
     dispatch(handleUserData());
-
-    // if(result)
   };
 }
 
@@ -577,13 +572,6 @@ export function handleToggleLike(productId) {
   };
 }
 
-// export function handleToggleFavorite(productId){
-//     return dispatch => {
-//         const { user } = getState();
-
-//     }
-// }
-
 export function handleUploadSelfDocument(image) {
   return async (dispatch, getState) => {
     const { user } = getState();
@@ -591,11 +579,10 @@ export function handleUploadSelfDocument(image) {
     const SELF_WITH_DOCUMENT = "SELF_WITH_DOCUMENT";
     const resizedPhoto = await ImageManipulator.manipulateAsync(
       image.uri,
-      [{ resize: { width: 300 } }], // resize to width of 300 and preserve aspect ratio
+      [{ resize: { width: 300 } }],
       { compress: 0.7, format: "jpeg" }
     );
 
-    //    console.log(resizedPhoto)
     const { filename } = await upload(resizedPhoto.uri);
 
     const result = await uploadDocument(filename, SELF_WITH_DOCUMENT);
@@ -640,7 +627,7 @@ export function handleUploadImage(file) {
       const formData = new FormData();
       const url = process.env.REACT_APP_API + "/upload";
       formData.append("image", file);
-
+      
       const response = await fetch(url, {
         method: "POST",
         headers: {},

@@ -7,7 +7,6 @@ import {
   handleInitHome,
   handleProcessActions,
 } from "../../store/actions/shared";
-import { H3, Subtitle2 } from "../../components/Typography";
 import { Button } from "../../components/Button";
 import styled from "styled-components/native";
 import Carrossel from "../../components/Carrossel";
@@ -42,7 +41,7 @@ export default function Home(props) {
 
   useEffect(() => {
     dispatch(handleInitHome());
-  }, []);
+  }, [dispatch]);
 
   const isLoading = shelvesState.loading;
 

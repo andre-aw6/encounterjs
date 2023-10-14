@@ -3,7 +3,7 @@ import { Subtitle2, H3, H4 } from "../../../components/Typography";
 import styled, { withTheme } from "styled-components/native";
 import { Space, SpaceHorizontal } from "../../../components/Space";
 import { Button } from "../../../components/Button";
-import { Image, View, Dimensions } from "react-native";
+import { View, Dimensions } from "react-native";
 import { getBottomSpace } from "react-native-iphone-x-helper";
 import { useSelector, useDispatch, connect } from "react-redux";
 import { currencyFormat } from "../../../utils/helpers";
@@ -14,9 +14,8 @@ import {
 import { openLoginPopup } from "../../../store/actions/user";
 import { Modalize } from "react-native-modalize";
 
-import { Entypo, AntDesign, EvilIcons } from "@expo/vector-icons";
+import { Entypo, AntDesign } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { disableExpoCliLogging } from "expo/build/logs/Logs";
 import { Box } from "../../../components/Box";
 import Constants from "expo-constants";
 import Delivery from "./Delivery";
@@ -283,7 +282,7 @@ const DisclaimerRenew = (props) => {
   );
 };
 
-const CartInfo = ({}) => {
+const CartInfo = () => {
   const cart = useSelector((state) => state.cart);
   const navigation = useNavigation();
   const { isLogged = false, pendences = [] } = useSelector(

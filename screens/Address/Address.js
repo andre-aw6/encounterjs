@@ -51,10 +51,10 @@ export default withTheme((props) => {
     
     useEffect(() => {
         return () => dispatch(handleCloseCartChoseAddress());
-    }, [])
+    }, [dispatch])
 
 
-    const openOrSelectAddress = key => {
+    const openOrSelectAddress = React.useCallback((key) => {
         if (choseAddressMode) {
             dispatch(handleSelectAddress(key));
             navigation.goBack();
@@ -62,14 +62,14 @@ export default withTheme((props) => {
             dispatch(handleSetCurrentLocation(key));
             navigation.navigate("AddNewAddress");
         }
-    }
+    }, [dispatch, choseAddressMode, navigation, handleSelectAddress]);
 
-    const locationClick = location => {
+    const locationClick = React.useCallback((location) => {
         dispatch(handleSetCurrentLocation(undefined, location));
         dispatch(handleSearchLocationByTerm(''));
         navigation.navigate('AddNewAddress');
-    }
-    
+    }, [dispatch, navigation]);
+
     const isLoggedContent = () => <Container>
         <Content>
             <SearchBar type="Location" />
@@ -126,9 +126,11 @@ export default withTheme((props) => {
         }
     </Container>
 
-    const isNotLoggedContent = () => <Container><NotLoggedBox title='Você não possui endereços cadastrados.' /></Container>
+    const isNotLoggedContent = () => <Container>
+        <NotLoggedBox title='Você não possui endereços cadastrados.' />
+        </Container>
 
     return <ScreenPopup  title={"Endereço"} withBorder >
-            {(isLogged) ? isLoggedContent() : <MainContent>{isNotLoggedContent()}</MainContent> }
-    </ScreenPopup>
+        {(isLogged) ? isLoggedContent() : <MainContent>{isNotLoggedContent()}</MainContent> }
+</ScreenPopup>
 })

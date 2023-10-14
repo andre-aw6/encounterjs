@@ -29,7 +29,7 @@ export function handleShowNotification(notification, type = 'success', time = 30
 
             dispatch(showNotification(false))
             await new Promise(r => setTimeout(r,300))
-        };
+        }
 
         dispatch(setNotification(notificationText, type, notification.action, notification.key))
         

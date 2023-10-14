@@ -143,8 +143,7 @@ function getConfigs(theme, type) {
       textColor: theme.colors.lightColor,
       background: theme.colors.primaryDarkColor,
       borderColor: theme.colors.primaryDarkColor,
-
-      height: theme.space.space4,
+      //height: theme.space.space4,
       paddingSides: theme.space.space1,
       height: theme.sizes.btn,
       fontSize: theme.sizes.subtitle1,
@@ -156,7 +155,7 @@ function getConfigs(theme, type) {
       textColor: theme.colors.lightColor,
       background: theme.colors.complementColor,
       borderColor: theme.colors.complementColor,
-      height: theme.space.space4,
+      //height: theme.space.space4,
       paddingSides: theme.space.space1,
       height: theme.sizes.btn,
       fontSize: theme.sizes.subtitle1,

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import InformationBox from '../../../components/InformationBox';
 import styled from 'styled-components/native';
 import OrderBox from './OrderBox';
-import { openLoginPopup } from '../../../store/actions/user';
 import { useDispatch, useSelector } from 'react-redux';
 import { handleLoadOrders } from '../../../store/actions/orders';
 import { useNavigation } from '@react-navigation/native';
@@ -23,7 +22,7 @@ export default (props) => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(handleLoadOrders())
-    }, [])
+    }, [dispatch])
     
     const navigation = useNavigation();
     const { isLogged = false } = useSelector(state => state.user)

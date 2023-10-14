@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled, { withTheme } from "styled-components/native";
+import styled, { withTheme } from "styled-components";
 import ProductStatus from "./components/ProductStatus";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { Button } from "../../components/Button";
@@ -11,7 +11,6 @@ import ScreePopup from "../../components/ScreePopup";
 import VideoPlayerScreen from "./components/VideoPlayer";
 import { Image, Dimensions, ScrollView } from "react-native";
 
-import { openPopupModal } from "../../store/actions/info";
 import {
   handleAddProduct,
   handleLoadDeliveryMethods,
@@ -30,7 +29,6 @@ import {
   handleRememberProduct,
 } from "../../store/actions/user";
 import { useNavigation } from "@react-navigation/native";
-import { getBottomSpace } from "react-native-iphone-x-helper";
 import { handleOpenEvaluationProduct } from "../../store/actions/product";
 import config from "../../config";
 import Icons from "../../components/Icons";
@@ -155,7 +153,7 @@ const ProductDetails = (props) => {
   const h2Size = +props.theme.sizes.h2.replace("px", "");
 
   if (!product) return <H2>Carregando...</H2>;
-  if (!product.isLoad && false)
+  if (!product.isLoad === false)
     return (
       <ScreePopup noScroll>
         <Container>
@@ -181,8 +179,7 @@ const ProductDetails = (props) => {
         </Container>
       </ScreePopup>
     );
-  // const contentOffset = (width - Title.WIDTH) / 2;
-  // const contentOffset = (width - CustomComponent.WIDTH) / 2;
+
 
   const tags_ = [
     product.age,

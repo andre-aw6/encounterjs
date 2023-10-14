@@ -41,7 +41,6 @@ export function handleInitApp() {
 
     try {
       await Promise.all([
-        ,
         dispatch(handleLoadNeedUpdateApp()),
         dispatch(handleLoadAppConfig()),
         dispatch(handleLoadOnboarding()),

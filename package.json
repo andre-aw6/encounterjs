@@ -28,6 +28,7 @@
     "babel-cli": "^6.26.0",
     "babel-install": "^2.1.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "deprecated-react-native-prop-types": "^4.1.0",
     "expo": "~48.0.15",
     "expo-apple-authentication": "^6.0.1",
     "expo-camera": "^13.2.1",

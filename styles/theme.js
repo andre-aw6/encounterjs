@@ -26,39 +26,31 @@ function actuatedNormalize(size) {
   }
 }
 
-
 export default {
   colors: {
 
     ...config.theme.colors,
 
-    // primaryColor: '#C1E0DF',
-    // primaryDarkColor: '#22A19f',
-    // primaryLightColor: '#EBF5F5',
-
-    // secondColor: '#BCBEC0',
-    // secondDarkColor: '#6D6E71',
-    // secondLightColor: '#E6E7E8',
-
-    // complementColor: '#081C4F',
-
-    // lightColor: '#FAFAFA',
-    // darkColor: '#414042',
-
-    // success: '#6FE382',
-    // warming: '#E39059',
-    // danger: '#E35959',
-
-
-
+    primaryColor: '#C1E0DF',
+    primaryDarkColor: '#22A19f',
+    primaryLightColor: '#EBF5F5',
+    secondColor: '#BCBEC0',
+    secondDarkColor: '#6D6E71',
+    secondLightColor: '#E6E7E8',
+    complementColor: '#081C4F',
+    lightColor: '#FAFAFA',
+    darkColor: '#414042',
+    success: '#6FE382',
+    warming: '#E39059',
+    danger: '#E35959',
   },
   elements:{
     productDetailsImage: .3,
     ...config.theme.elements
   },
   header: {
-    heigth: "50px",
-    largeHeigth: "80px",
+    height: "50px",
+    largeHeight: "80px",
     title: "16px",
     largeTitle: "24px"
   },

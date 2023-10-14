@@ -15,7 +15,6 @@ import { View } from 'react-native-animatable';
 import { translation } from '../../texts';
 import { useNavigation } from '@react-navigation/native';
 
-
 const Container = styled.View`
     min-height:100%;
     padding: ${props => props.theme.space.space2};
@@ -31,7 +30,8 @@ const Cupons = () => {
     const { cupons = undefined } = useSelector(state => state.cupons)
     useEffect(() => {
         dispatch(handleLoadCupons())
-    }, [])
+    }, [dispatch]);
+    
     const hasCupons = cupons != undefined && cupons.length > 0;
     
     const openFilter = (filter) => {

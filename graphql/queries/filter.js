@@ -1,8 +1,8 @@
-import gql from 'graphql-tag'
+import gql from 'graphql-tag';
 
-export const getFiltersQuery = gql
+export const getFiltersQuery = gql`
 
-`query{
+  query{
     getFilters{
       filters{
         type
@@ -30,20 +30,20 @@ export const getFiltersQuery = gql
       }
     }
   }`
-export const getFilterQuery = gql
 
-`query($key: String!){
-  getFilter(key: $key){
-    searchGroup
-    order
-    categories
-    tags
-    numberOfPlayer
-    matchTimeAverage
-    complexity
-    language
-    price
-    age
-    text
-  }
-}`
+export const getFilterQuery = gql`
+  query($key: String!){
+    getFilter(key: $key){
+      searchGroup
+      order
+      categories
+      tags
+      numberOfPlayer
+      matchTimeAverage
+      complexity
+      language
+      price
+      age
+      text
+    }
+  }`

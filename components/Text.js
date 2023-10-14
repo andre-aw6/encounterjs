@@ -2,4 +2,10 @@ import React from 'react';
 import styled from 'styled-components/native';
 
 
-export default (props) => <Text {...props} style={{ fontFamily: 'Nunito' }}>{props.children}</Text> 
+const Text = styled.Text`
+  font-family: 'Nunito';
+`;
+
+const CustomText = (props) => <Text {...props}>{props.children}</Text>;
+
+export default CustomText;
